@@ -1,12 +1,15 @@
 package com.dev.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.dev.dto.AuthorDTO;
+import com.dev.dto.CommentDTO;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -27,6 +30,7 @@ public class Post implements Serializable{
 	private String title;
 	private String body;
 	private AuthorDTO author;
+	private List<CommentDTO> comments = new ArrayList<>();
 	
 	public Post() {
 		
